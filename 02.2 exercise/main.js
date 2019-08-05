@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var button_1 = require("./button");
+var button = new button_1.Button(5);
+button.print();
+button.click();
+button.print();
+console.log('State ' + button.state);
+button.click();
+button.print();
+console.log('State ' + button.state);
