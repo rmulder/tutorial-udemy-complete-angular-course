@@ -1,0 +1,11 @@
+<h2>{{getNumAuthors()}} Authors</h2>
+<h2 [ngPlural]="getNumAuthors()">
+    <ng-template ngPluralCase="=0">No Authors</ng-template>
+    <ng-template ngPluralCase="=1">1 Author</ng-template>
+    <ng-template ngPluralCase="other">{{getNumAuthors()}} Authors</ng-template>
+</h2>
+<ul>
+    <li *ngFor="let author of authors">
+        {{author}}
+    </li>
+</ul>
