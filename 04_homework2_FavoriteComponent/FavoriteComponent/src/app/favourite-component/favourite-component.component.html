@@ -1,0 +1,42 @@
+<!-- <p>favourite-component</p> -->
+<br>
+
+<!-- Bootstrap glyphicon not working: https://stackoverflow.com/a/47692944 -->
+<p>Icon: <span class="glyphicon glyphicon-search"></span></p>
+
+<!--https://www.npmjs.com/package/angular-font-awesome
+-->
+
+<br>
+<div class="fa-4x">
+  <span class="fa-layers fa-fw" style="background:Tomato">
+    <fa name="star" (click)="onClick()" [inverse]="!isFavourite" [class.inverse]="!isFavourite"></fa>
+    <fa name="star" class="fas" (click)="onClick()" [inverse]="isFavourite"></fa>
+
+  </span>
+
+</div>
+
+<br>
+<!-- <div class="fa-4x">
+  <span class="fa-layers fa-fw" style="background:Tomato">
+    <i class="fa fa-star" (click)="onClick()"></i>
+    <i class="fa fa-star-o" (click)="onClick()"></i>
+  </span>
+</div>
+<br> -->
+
+<div class="fa-4x">
+  <span class="fa-layers fa-fw" style="background:Tomato">
+  <i [ngClass]="(!isFavourite) ? 'fa fa-star-o':'fa fa-star'" (click)="onClick()"></i>
+  </span>
+</div>
+
+<br>
+<input [value]="formText"
+(key.enter)="formText = $event.target.value; printFormText()"
+(input)="formText = $event.target.value; printFormText()" />
+
+<br>
+<p>Text (title case pipe format) = {{ formText | titlecase }}</p>
+<p>Text = {{ formText }}</p>

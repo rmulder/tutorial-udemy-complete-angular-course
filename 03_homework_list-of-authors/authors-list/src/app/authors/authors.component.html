@@ -9,4 +9,39 @@
         {{author}}
     </li>
 </ul>
-<button class="btn btn-primary" [class.active]="isActive">Button</button>
+<button class="btn btn-primary" [class.active]="isActive"
+[style.backgroundColor]="isActive ? 'blue' : 'white'"
+>Button</button>
+<div (click)="onDivClick($event)">
+    <button class='btn btn-primary' (click)="onClick($event)">
+    Click
+    </button>
+</div>
+
+<div style="border:none">
+<input (keyup.enter)="onKeyUp($event)" />
+</div>
+<br>
+<div style="border:none">
+    <input (keyup.enter)="onKeyUp2(email.value)" />
+    <!-- not working witot template variable -->
+    <input #email (keyup.enter)="onKeyUp2(email.value)" />
+</div>
+<!-- #email = template variable -->
+
+<!-- Similar to 2-way binding -->
+<br>
+<div>
+    <input [value]="email2"
+    (keyup.enter)="email2 = $event.target.value; onKeyUp3()" />
+</div>
+
+<!-- Real 2-way binding 
+import { FormsModule } from '@angular/forms';
+change imports: [
+-->
+<br>
+<div>
+    <input [(ngModel)]="email4" (keyup.enter)="onKeyUp4()" />
+</div>
+
