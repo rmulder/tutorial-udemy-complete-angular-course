@@ -6,19 +6,22 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { LikeComponent } from './like/like.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { MyFormComponent } from './my-form/my-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LikeComponent,
     ZippyComponent,
-    MyFormComponent
+    MyFormComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
     AngularFontAwesomeModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
