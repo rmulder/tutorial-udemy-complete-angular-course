@@ -1,0 +1,11 @@
+.like-icon {
+    color: #ccc;
+    cursor: pointer;
+}
+.like-icon-active {
+    color: deeppink;
+}
+.horizontal-space{
+    width: 5%;
+    display: inline-block;
+}

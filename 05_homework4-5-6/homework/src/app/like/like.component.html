@@ -1,0 +1,21 @@
+<i class="fa fa-thumbs-up fa-2x like-icon"
+[style.color] = "(!isActive) ? '#ccc' : 'deeppink'"
+(click)='onClick()'></i>
+{{totalNumber|number}}
+
+<!-- <br> -->
+<span class='horizontal-space'></span>
+
+<i class="fa fa-thumbs-up fa-2x like-icon"
+[class.like-icon-active]="(!isActive)"
+(click)='onClick()'></i>
+{{totalNumber|number}}
+
+<!-- <br> -->
+<!-- &#09;&#09;&#09; -->
+<span class='horizontal-space'></span>
+
+<i class="fa fa-thumbs-up fa-2x like-icon" 
+[ngStyle]="{'color': isActive ? '#ccc' : 'deeppink'}"
+(click)='onClick()'></i>
+{{totalNumber|number}}
