@@ -1,0 +1,14 @@
+<h3>Followers</h3>
+<p>Github user <i>{{name}}</i></p>
+
+<!-- {{followers | json}} -->
+
+<!-- https://codepen.io/secondfret/pen/tgBCI -->
+<ul>
+    <li *ngFor="let follower of followers">
+        <img src={{follower.avatar_url}} class="img-circle" height=50px alt={{follower.login}}>
+        <b>{{follower.login}}</b>
+        <br>
+        <a href={{follower.html_url}} color="blue">{{follower.html_url}}</a>
+    </li>
+</ul>
