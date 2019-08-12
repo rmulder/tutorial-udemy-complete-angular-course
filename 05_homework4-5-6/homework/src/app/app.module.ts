@@ -8,6 +8,8 @@ import { ZippyComponent } from './zippy/zippy.component';
 import { MyFormComponent } from './my-form/my-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { PostsComponent } from './posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,15 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     LikeComponent,
     ZippyComponent,
     MyFormComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     AngularFontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
